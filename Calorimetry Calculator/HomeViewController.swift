@@ -10,13 +10,9 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var sexSegmentController: UISegmentedControl!
-    
     @IBOutlet weak var WeightField: UITextField!
-    
     @IBOutlet weak var HeightField: UITextField!
-    
     @IBOutlet weak var AgeField: UITextField!
-    
     @IBOutlet weak var ActivityField: UITextField!
     
     
