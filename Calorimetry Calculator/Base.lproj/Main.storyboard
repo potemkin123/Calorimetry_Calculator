@@ -159,9 +159,6 @@
                                                         <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="60"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Clear"/>
-                                                        <connections>
-                                                            <action selector="clearDidTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hcL-3B-SWo"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -205,11 +202,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ActivityField" destination="aTi-gD-Ccq" id="3Mj-e2-AY0"/>
-                        <outlet property="AgeField" destination="Z4x-xd-qwA" id="QQV-4l-DGo"/>
-                        <outlet property="HeightField" destination="woU-XV-OUT" id="LiM-xD-fLF"/>
-                        <outlet property="WeightField" destination="1kO-M5-1hB" id="Bon-g3-C6l"/>
-                        <outlet property="sexSegmentController" destination="fkV-sY-88l" id="h2W-cU-9ti"/>
+                        <outlet property="activityField" destination="aTi-gD-Ccq" id="XEm-Yt-f9Y"/>
+                        <outlet property="ageField" destination="Z4x-xd-qwA" id="ouw-75-nMd"/>
+                        <outlet property="canculateButton" destination="kKy-hF-xsJ" id="Tsa-Qm-0C1"/>
+                        <outlet property="heightField" destination="woU-XV-OUT" id="W6Z-Xe-ivv"/>
+                        <outlet property="sexSegmentControl" destination="fkV-sY-88l" id="EA4-9o-qzj"/>
+                        <outlet property="weightField" destination="1kO-M5-1hB" id="Jtg-Ha-cqP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
