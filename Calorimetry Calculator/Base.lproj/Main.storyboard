@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lAa-gk-fed">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="9lp-gA-nyX">
+            <objects>
+                <navigationController id="lAa-gk-fed" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="deV-px-qth">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QVU-jy-2Qn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mnS-IL-5yf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-921" y="282"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,10 +33,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smA-vg-aKo">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="au4-TY-Qs2">
-                                        <rect key="frame" x="16" y="40" width="361" height="719"/>
+                                        <rect key="frame" x="16" y="40" width="361" height="675"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fkV-sY-88l">
                                                 <rect key="frame" x="0.0" y="0.0" width="361" height="32"/>
@@ -28,6 +44,9 @@
                                                     <segment title="First"/>
                                                     <segment title="Second"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="sexControlDidCange:" destination="BYZ-38-t0r" eventType="valueChanged" id="4Gn-kF-lL8"/>
+                                                </connections>
                                             </segmentedControl>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nfy-5q-wiB">
                                                 <rect key="frame" x="0.0" y="55" width="361" height="70"/>
@@ -159,6 +178,9 @@
                                                         <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="60"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Clear"/>
+                                                        <connections>
+                                                            <action selector="sexControlDidTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qMi-TI-fhV"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -201,6 +223,7 @@
                             <constraint firstItem="smA-vg-aKo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zN6-sw-5jV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dlW-sN-eJ3"/>
                     <connections>
                         <outlet property="activityField" destination="aTi-gD-Ccq" id="XEm-Yt-f9Y"/>
                         <outlet property="ageField" destination="Z4x-xd-qwA" id="ouw-75-nMd"/>
@@ -208,11 +231,45 @@
                         <outlet property="heightField" destination="woU-XV-OUT" id="W6Z-Xe-ivv"/>
                         <outlet property="sexSegmentControl" destination="fkV-sY-88l" id="EA4-9o-qzj"/>
                         <outlet property="weightField" destination="1kO-M5-1hB" id="Jtg-Ha-cqP"/>
+                        <segue destination="xfe-eV-bRI" kind="show" identifier="activitySegue" id="AgM-pG-gOT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="47" y="-13"/>
+        </scene>
+        <!--Activities List View Controller-->
+        <scene sceneID="eG5-NS-ANh">
+            <objects>
+                <viewController id="xfe-eV-bRI" customClass="ActivitiesListViewController" customModule="Calorimetry_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ulS-8f-hJW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaT-H9-Qxo">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2V4-ky-Aoy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RaT-H9-Qxo" firstAttribute="leading" secondItem="2V4-ky-Aoy" secondAttribute="leading" id="8Gq-1w-RQc"/>
+                            <constraint firstItem="2V4-ky-Aoy" firstAttribute="trailing" secondItem="RaT-H9-Qxo" secondAttribute="trailing" id="8lv-1J-jtf"/>
+                            <constraint firstItem="RaT-H9-Qxo" firstAttribute="top" secondItem="2V4-ky-Aoy" secondAttribute="top" id="SEG-On-cGd"/>
+                            <constraint firstItem="2V4-ky-Aoy" firstAttribute="bottom" secondItem="RaT-H9-Qxo" secondAttribute="bottom" id="anV-bA-kaC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vq0-dW-FdL"/>
+                    <connections>
+                        <outlet property="label" destination="RaT-H9-Qxo" id="L16-bW-W6E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89l-40-b8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47" y="730"/>
         </scene>
     </scenes>
     <resources>

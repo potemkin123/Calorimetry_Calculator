@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C16391429B20281009CFB72 /* ActivitiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C16391329B20281009CFB72 /* ActivitiesListViewController.swift */; };
+		1C56C5ED29B1462D00042048 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C56C5EC29B1462D00042048 /* Sex.swift */; };
+		1C56C5EF29B146B500042048 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C56C5EE29B146B500042048 /* Activity.swift */; };
 		1CA1930029A92F3C00A5AA99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA192FF29A92F3C00A5AA99 /* AppDelegate.swift */; };
 		1CA1930229A92F3C00A5AA99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1930129A92F3C00A5AA99 /* SceneDelegate.swift */; };
 		1CA1930429A92F3C00A5AA99 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1930329A92F3C00A5AA99 /* HomeViewController.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C16391329B20281009CFB72 /* ActivitiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesListViewController.swift; sourceTree = "<group>"; };
+		1C56C5EC29B1462D00042048 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		1C56C5EE29B146B500042048 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		1CA192FC29A92F3C00A5AA99 /* Calorimetry Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calorimetry Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA192FF29A92F3C00A5AA99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CA1930129A92F3C00A5AA99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,10 +108,13 @@
 				1CA192FF29A92F3C00A5AA99 /* AppDelegate.swift */,
 				1CA1930129A92F3C00A5AA99 /* SceneDelegate.swift */,
 				1CA1930329A92F3C00A5AA99 /* HomeViewController.swift */,
+				1C56C5EC29B1462D00042048 /* Sex.swift */,
+				1C56C5EE29B146B500042048 /* Activity.swift */,
 				1CA1930529A92F3C00A5AA99 /* Main.storyboard */,
 				1CA1930829A92F3D00A5AA99 /* Assets.xcassets */,
 				1CA1930A29A92F3D00A5AA99 /* LaunchScreen.storyboard */,
 				1CA1930D29A92F3D00A5AA99 /* Info.plist */,
+				1C16391329B20281009CFB72 /* ActivitiesListViewController.swift */,
 			);
 			path = "Calorimetry Calculator";
 			sourceTree = "<group>";
@@ -258,6 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C56C5EF29B146B500042048 /* Activity.swift in Sources */,
+				1C16391429B20281009CFB72 /* ActivitiesListViewController.swift in Sources */,
+				1C56C5ED29B1462D00042048 /* Sex.swift in Sources */,
 				1CA1930429A92F3C00A5AA99 /* HomeViewController.swift in Sources */,
 				1CA1930029A92F3C00A5AA99 /* AppDelegate.swift in Sources */,
 				1CA1930229A92F3C00A5AA99 /* SceneDelegate.swift in Sources */,
