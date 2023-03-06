@@ -28,7 +28,6 @@ class HomeViewController: UIViewController {
         configureSexSegmentControl()
         configureTextFields()
         configureActivityField()
-        
         weightField.becomeFirstResponder()
         
     }
@@ -74,11 +73,10 @@ class HomeViewController: UIViewController {
     func showAlertWith(title: String) {
         let alert = UIAlertController (title: "Your result", message: title, preferredStyle: .alert)
         alert.addAction(.init(title: "Ok", style: .cancel))
-        alert.addAction(.init(title: "Activity detail info", style: .default){ _ in
-            self.present (alert, animated: true)
+        alert.addAction(.init(title: "Activity detail info", style: .default) { _ in
             self.performSegue(withIdentifier: "activitySegue", sender: self)
         })
-        
+        self.present(alert, animated: true)
     }
                
     @IBAction func sexControlDidCange(_ sender: UISegmentedControl) {
